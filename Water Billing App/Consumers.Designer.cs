@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consumers));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             label7 = new Label();
@@ -59,6 +59,8 @@
             bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            label11 = new Label();
+            textBox4 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -138,11 +140,12 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Blue;
             label2.Location = new Point(748, 30);
             label2.Name = "label2";
-            label2.Size = new Size(84, 19);
+            label2.Size = new Size(92, 19);
             label2.TabIndex = 18;
-            label2.Text = "Consumer";
+            label2.Text = "Consumers";
             // 
             // bunifuElipse1
             // 
@@ -152,7 +155,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(69, 175);
+            textBox1.Location = new Point(58, 129);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(194, 27);
             textBox1.TabIndex = 32;
@@ -162,7 +165,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(69, 153);
+            label1.Location = new Point(58, 107);
             label1.Name = "label1";
             label1.Size = new Size(135, 19);
             label1.TabIndex = 33;
@@ -174,7 +177,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(69, 215);
+            label6.Location = new Point(58, 169);
             label6.Name = "label6";
             label6.Size = new Size(152, 19);
             label6.TabIndex = 35;
@@ -183,7 +186,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(69, 237);
+            textBox2.Location = new Point(58, 191);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(194, 75);
@@ -194,7 +197,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(69, 327);
+            label8.Location = new Point(58, 281);
             label8.Name = "label8";
             label8.Size = new Size(138, 19);
             label8.TabIndex = 37;
@@ -203,7 +206,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(69, 349);
+            textBox3.Location = new Point(58, 303);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(194, 27);
             textBox3.TabIndex = 36;
@@ -213,7 +216,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(69, 391);
+            label9.Location = new Point(58, 345);
             label9.Name = "label9";
             label9.Size = new Size(157, 19);
             label9.TabIndex = 39;
@@ -224,7 +227,7 @@
             comboBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Family", "Commercial", "Business" });
-            comboBox1.Location = new Point(69, 413);
+            comboBox1.Location = new Point(58, 367);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(194, 23);
             comboBox1.TabIndex = 40;
@@ -234,16 +237,16 @@
             label10.AutoSize = true;
             label10.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(69, 450);
+            label10.Location = new Point(58, 404);
             label10.Name = "label10";
-            label10.Size = new Size(77, 19);
+            label10.Size = new Size(81, 19);
             label10.TabIndex = 41;
-            label10.Text = "Join Date";
+            label10.Text = "Join Date:";
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.AccessibleRole = AccessibleRole.None;
-            dateTimePicker1.Location = new Point(69, 470);
+            dateTimePicker1.Location = new Point(58, 424);
             dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(194, 23);
@@ -281,7 +284,7 @@
             bunifuThinButton21.IdleFillColor = Color.Blue;
             bunifuThinButton21.IdleForecolor = Color.White;
             bunifuThinButton21.IdleLineColor = Color.SeaGreen;
-            bunifuThinButton21.Location = new Point(61, 520);
+            bunifuThinButton21.Location = new Point(50, 540);
             bunifuThinButton21.Margin = new Padding(5);
             bunifuThinButton21.Name = "bunifuThinButton21";
             bunifuThinButton21.Size = new Size(96, 44);
@@ -306,7 +309,7 @@
             bunifuThinButton22.IdleFillColor = Color.Blue;
             bunifuThinButton22.IdleForecolor = Color.White;
             bunifuThinButton22.IdleLineColor = Color.SeaGreen;
-            bunifuThinButton22.Location = new Point(167, 520);
+            bunifuThinButton22.Location = new Point(156, 540);
             bunifuThinButton22.Margin = new Padding(5);
             bunifuThinButton22.Name = "bunifuThinButton22";
             bunifuThinButton22.Size = new Size(96, 44);
@@ -330,7 +333,7 @@
             bunifuThinButton23.IdleFillColor = Color.Blue;
             bunifuThinButton23.IdleForecolor = Color.White;
             bunifuThinButton23.IdleLineColor = Color.SeaGreen;
-            bunifuThinButton23.Location = new Point(108, 574);
+            bunifuThinButton23.Location = new Point(97, 594);
             bunifuThinButton23.Margin = new Padding(5);
             bunifuThinButton23.Name = "bunifuThinButton23";
             bunifuThinButton23.Size = new Size(96, 44);
@@ -339,26 +342,26 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle14.ForeColor = Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             guna2DataGridView1.ColumnHeadersHeight = 4;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.White;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.Location = new Point(337, 71);
             guna2DataGridView1.Name = "guna2DataGridView1";
@@ -388,12 +391,33 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(58, 469);
+            label11.Name = "label11";
+            label11.Size = new Size(46, 19);
+            label11.TabIndex = 70;
+            label11.Text = "Rate:";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox4.Location = new Point(58, 491);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(194, 27);
+            textBox4.TabIndex = 69;
+            // 
             // Consumers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
+            Controls.Add(label11);
+            Controls.Add(textBox4);
             Controls.Add(guna2DataGridView1);
             Controls.Add(bunifuThinButton23);
             Controls.Add(bunifuThinButton22);
@@ -455,5 +479,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Label label11;
+        private TextBox textBox4;
     }
 }
