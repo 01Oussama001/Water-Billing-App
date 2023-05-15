@@ -30,6 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consumers));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             label7 = new Label();
@@ -39,9 +42,6 @@
             label3 = new Label();
             label2 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
             label6 = new Label();
@@ -49,9 +49,20 @@
             label8 = new Label();
             textBox3 = new TextBox();
             label9 = new Label();
+            comboBox1 = new ComboBox();
+            label10 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
@@ -138,39 +149,6 @@
             bunifuElipse1.ElipseRadius = 30;
             bunifuElipse1.TargetControl = this;
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.ForeColor = Color.Blue;
-            label15.Location = new Point(17, 666);
-            label15.Name = "label15";
-            label15.Size = new Size(80, 19);
-            label15.TabIndex = 31;
-            label15.Text = "Save Life!";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.ForeColor = Color.Blue;
-            label14.Location = new Point(17, 638);
-            label14.Name = "label14";
-            label14.Size = new Size(97, 19);
-            label14.TabIndex = 30;
-            label14.Text = "Save Water!";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.ForeColor = Color.Blue;
-            label13.Location = new Point(17, 608);
-            label13.Name = "label13";
-            label13.Size = new Size(104, 19);
-            label13.TabIndex = 29;
-            label13.Text = "Water is Life!";
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -241,12 +219,188 @@
             label9.TabIndex = 39;
             label9.Text = "Consumer Category:";
             // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Family", "Commercial", "Business" });
+            comboBox1.Location = new Point(69, 413);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(194, 23);
+            comboBox1.TabIndex = 40;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(69, 450);
+            label10.Name = "label10";
+            label10.Size = new Size(77, 19);
+            label10.TabIndex = 41;
+            label10.Text = "Join Date";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.AccessibleRole = AccessibleRole.None;
+            dateTimePicker1.Location = new Point(69, 470);
+            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(194, 23);
+            dateTimePicker1.TabIndex = 42;
+            // 
+            // bunifuElipse2
+            // 
+            bunifuElipse2.ElipseRadius = 5;
+            bunifuElipse2.TargetControl = this;
+            // 
+            // bunifuElipse3
+            // 
+            bunifuElipse3.ElipseRadius = 5;
+            bunifuElipse3.TargetControl = this;
+            // 
+            // bunifuElipse4
+            // 
+            bunifuElipse4.ElipseRadius = 25;
+            bunifuElipse4.TargetControl = this;
+            // 
+            // bunifuThinButton21
+            // 
+            bunifuThinButton21.ActiveBorderThickness = 1;
+            bunifuThinButton21.ActiveCornerRadius = 20;
+            bunifuThinButton21.ActiveFillColor = Color.SeaGreen;
+            bunifuThinButton21.ActiveForecolor = Color.White;
+            bunifuThinButton21.ActiveLineColor = Color.SeaGreen;
+            bunifuThinButton21.BackColor = Color.White;
+            bunifuThinButton21.BackgroundImage = (Image)resources.GetObject("bunifuThinButton21.BackgroundImage");
+            bunifuThinButton21.ButtonText = "Save";
+            bunifuThinButton21.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bunifuThinButton21.ForeColor = Color.SeaGreen;
+            bunifuThinButton21.IdleBorderThickness = 1;
+            bunifuThinButton21.IdleCornerRadius = 20;
+            bunifuThinButton21.IdleFillColor = Color.Blue;
+            bunifuThinButton21.IdleForecolor = Color.White;
+            bunifuThinButton21.IdleLineColor = Color.SeaGreen;
+            bunifuThinButton21.Location = new Point(61, 520);
+            bunifuThinButton21.Margin = new Padding(5);
+            bunifuThinButton21.Name = "bunifuThinButton21";
+            bunifuThinButton21.Size = new Size(96, 44);
+            bunifuThinButton21.TabIndex = 43;
+            bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
+            bunifuThinButton21.Click += bunifuThinButton21_Click;
+            // 
+            // bunifuThinButton22
+            // 
+            bunifuThinButton22.ActiveBorderThickness = 1;
+            bunifuThinButton22.ActiveCornerRadius = 20;
+            bunifuThinButton22.ActiveFillColor = Color.SeaGreen;
+            bunifuThinButton22.ActiveForecolor = Color.White;
+            bunifuThinButton22.ActiveLineColor = Color.SeaGreen;
+            bunifuThinButton22.BackColor = Color.White;
+            bunifuThinButton22.BackgroundImage = (Image)resources.GetObject("bunifuThinButton22.BackgroundImage");
+            bunifuThinButton22.ButtonText = "Edit";
+            bunifuThinButton22.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bunifuThinButton22.ForeColor = Color.SeaGreen;
+            bunifuThinButton22.IdleBorderThickness = 1;
+            bunifuThinButton22.IdleCornerRadius = 20;
+            bunifuThinButton22.IdleFillColor = Color.Blue;
+            bunifuThinButton22.IdleForecolor = Color.White;
+            bunifuThinButton22.IdleLineColor = Color.SeaGreen;
+            bunifuThinButton22.Location = new Point(167, 520);
+            bunifuThinButton22.Margin = new Padding(5);
+            bunifuThinButton22.Name = "bunifuThinButton22";
+            bunifuThinButton22.Size = new Size(96, 44);
+            bunifuThinButton22.TabIndex = 44;
+            bunifuThinButton22.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // bunifuThinButton23
+            // 
+            bunifuThinButton23.ActiveBorderThickness = 1;
+            bunifuThinButton23.ActiveCornerRadius = 20;
+            bunifuThinButton23.ActiveFillColor = Color.SeaGreen;
+            bunifuThinButton23.ActiveForecolor = Color.White;
+            bunifuThinButton23.ActiveLineColor = Color.SeaGreen;
+            bunifuThinButton23.BackColor = Color.White;
+            bunifuThinButton23.BackgroundImage = (Image)resources.GetObject("bunifuThinButton23.BackgroundImage");
+            bunifuThinButton23.ButtonText = "Delete";
+            bunifuThinButton23.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bunifuThinButton23.ForeColor = Color.SeaGreen;
+            bunifuThinButton23.IdleBorderThickness = 1;
+            bunifuThinButton23.IdleCornerRadius = 20;
+            bunifuThinButton23.IdleFillColor = Color.Blue;
+            bunifuThinButton23.IdleForecolor = Color.White;
+            bunifuThinButton23.IdleLineColor = Color.SeaGreen;
+            bunifuThinButton23.Location = new Point(108, 574);
+            bunifuThinButton23.Margin = new Padding(5);
+            bunifuThinButton23.Name = "bunifuThinButton23";
+            bunifuThinButton23.Size = new Size(96, 44);
+            bunifuThinButton23.TabIndex = 45;
+            bunifuThinButton23.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2DataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView1.Location = new Point(337, 71);
+            guna2DataGridView1.Name = "guna2DataGridView1";
+            guna2DataGridView1.RowHeadersVisible = false;
+            guna2DataGridView1.RowTemplate.Height = 25;
+            guna2DataGridView1.Size = new Size(841, 547);
+            guna2DataGridView1.TabIndex = 68;
+            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
+            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
+            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
+            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
             // Consumers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
+            Controls.Add(guna2DataGridView1);
+            Controls.Add(bunifuThinButton23);
+            Controls.Add(bunifuThinButton22);
+            Controls.Add(bunifuThinButton21);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label10);
+            Controls.Add(comboBox1);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(textBox3);
@@ -254,9 +408,6 @@
             Controls.Add(textBox2);
             Controls.Add(label1);
             Controls.Add(textBox1);
-            Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(label13);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(label7);
@@ -267,10 +418,12 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Consumers";
-            Text = "Consumers";
+            Text = " ";
+            Load += Consumers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,9 +438,6 @@
         private Label label3;
         private Label label2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Label label15;
-        private Label label14;
-        private Label label13;
         private TextBox textBox1;
         private Label label1;
         private Label label6;
@@ -295,5 +445,15 @@
         private Label label8;
         private TextBox textBox3;
         private Label label9;
+        private ComboBox comboBox1;
+        private Label label10;
+        private DateTimePicker dateTimePicker1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

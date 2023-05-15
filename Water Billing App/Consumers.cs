@@ -21,5 +21,15 @@ namespace Water_Billing_App
         {
 
         }
+
+        private void Consumers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
