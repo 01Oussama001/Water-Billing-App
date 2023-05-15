@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -57,6 +57,7 @@
             label2 = new Label();
             AgentsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             AgPassTb = new TextBox();
+            bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -86,6 +87,7 @@
             DeleteBtn.Size = new Size(96, 44);
             DeleteBtn.TabIndex = 66;
             DeleteBtn.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // SaveBtn
             // 
@@ -150,6 +152,7 @@
             EditBtn.Size = new Size(96, 44);
             EditBtn.TabIndex = 65;
             EditBtn.TextAlign = ContentAlignment.MiddleCenter;
+            EditBtn.Click += EditBtn_Click;
             // 
             // label9
             // 
@@ -307,30 +310,31 @@
             // 
             // AgentsDGV
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            AgentsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            AgentsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            AgentsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            AgentsDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            AgentsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            AgentsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            AgentsDGV.ColumnHeadersHeight = 28;
+            AgentsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            AgentsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             AgentsDGV.GridColor = Color.FromArgb(231, 229, 255);
             AgentsDGV.Location = new Point(337, 87);
             AgentsDGV.Name = "AgentsDGV";
             AgentsDGV.RowHeadersVisible = false;
-            AgentsDGV.RowTemplate.Height = 25;
+            AgentsDGV.RowTemplate.Height = 24;
             AgentsDGV.Size = new Size(841, 547);
             AgentsDGV.TabIndex = 67;
             AgentsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -342,18 +346,19 @@
             AgentsDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             AgentsDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             AgentsDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            AgentsDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            AgentsDGV.ThemeStyle.HeaderStyle.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             AgentsDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            AgentsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AgentsDGV.ThemeStyle.HeaderStyle.Height = 4;
+            AgentsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            AgentsDGV.ThemeStyle.HeaderStyle.Height = 28;
             AgentsDGV.ThemeStyle.ReadOnly = false;
             AgentsDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             AgentsDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            AgentsDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            AgentsDGV.ThemeStyle.RowsStyle.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             AgentsDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            AgentsDGV.ThemeStyle.RowsStyle.Height = 25;
-            AgentsDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            AgentsDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            AgentsDGV.ThemeStyle.RowsStyle.Height = 24;
+            AgentsDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.Blue;
+            AgentsDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            AgentsDGV.CellContentClick += AgentsDGV_CellContentClick;
             // 
             // AgPassTb
             // 
@@ -362,6 +367,11 @@
             AgPassTb.Name = "AgPassTb";
             AgPassTb.Size = new Size(194, 27);
             AgPassTb.TabIndex = 68;
+            // 
+            // bunifuElipse5
+            // 
+            bunifuElipse5.ElipseRadius = 30;
+            bunifuElipse5.TargetControl = this;
             // 
             // Agents
             // 
@@ -427,5 +437,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2DataGridView AgentsDGV;
         private TextBox AgPassTb;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
     }
 }
