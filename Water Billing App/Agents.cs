@@ -51,10 +51,7 @@ namespace Water_Billing_App
                     MessageBox.Show("Agent Saved Successfully!");
                     con.Close();
                     showAgents();
-                    AgNameTb.Text = "";
-                    AgAddTb.Text = "";
-                    AgPhoneTb.Text = "";
-                    AgPassTb.Text = "";
+                    Reset();
                 }
                 catch (Exception Ex)
                 {
@@ -100,6 +97,7 @@ namespace Water_Billing_App
                     MessageBox.Show("Agent Edited Successfully!");
                     con.Close();
                     showAgents();
+                    Reset();
                 }
                 catch (Exception Ex)
                 {
@@ -108,12 +106,13 @@ namespace Water_Billing_App
             }
         }
 
-        private void reset()
+        private void Reset()
         {
             AgNameTb.Text = "";
             AgAddTb.Text = "";
             AgPhoneTb.Text = "";
             AgPassTb.Text = "";
+            key = 0;
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -133,6 +132,7 @@ namespace Water_Billing_App
                     MessageBox.Show("Agent Deleted Successfully!");
                     con.Close();
                     showAgents();
+                    Reset();
                 }
                 catch (Exception Ex)
                 {
