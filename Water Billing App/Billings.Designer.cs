@@ -59,9 +59,8 @@
             bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
             TaxTb = new TextBox();
             label10 = new Label();
-            TotalTb = new TextBox();
-            label11 = new Label();
             BillingsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            AgentLbl = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -70,6 +69,7 @@
             // 
             // RateTb
             // 
+            RateTb.Enabled = false;
             RateTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             RateTb.Location = new Point(69, 360);
             RateTb.Name = "RateTb";
@@ -103,7 +103,7 @@
             DeleteBtn.IdleFillColor = Color.Blue;
             DeleteBtn.IdleForecolor = Color.White;
             DeleteBtn.IdleLineColor = Color.SeaGreen;
-            DeleteBtn.Location = new Point(108, 595);
+            DeleteBtn.Location = new Point(108, 528);
             DeleteBtn.Margin = new Padding(5);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(96, 44);
@@ -127,7 +127,7 @@
             EditBtn.IdleFillColor = Color.Blue;
             EditBtn.IdleForecolor = Color.White;
             EditBtn.IdleLineColor = Color.SeaGreen;
-            EditBtn.Location = new Point(167, 541);
+            EditBtn.Location = new Point(167, 474);
             EditBtn.Margin = new Padding(5);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(96, 44);
@@ -197,7 +197,7 @@
             SaveBtn.IdleFillColor = Color.Blue;
             SaveBtn.IdleForecolor = Color.White;
             SaveBtn.IdleLineColor = Color.SeaGreen;
-            SaveBtn.Location = new Point(61, 541);
+            SaveBtn.Location = new Point(61, 474);
             SaveBtn.Margin = new Padding(5);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.Size = new Size(96, 44);
@@ -309,6 +309,7 @@
             CIdCb.Name = "CIdCb";
             CIdCb.Size = new Size(194, 23);
             CIdCb.TabIndex = 89;
+            CIdCb.SelectionChangeCommitted += CIdCb_SelectionChangeCommitted;
             // 
             // BPeriod
             // 
@@ -343,25 +344,6 @@
             label10.TabIndex = 91;
             label10.Text = "Tax:";
             // 
-            // TotalTb
-            // 
-            TotalTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            TotalTb.Location = new Point(69, 480);
-            TotalTb.Name = "TotalTb";
-            TotalTb.Size = new Size(194, 27);
-            TotalTb.TabIndex = 94;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.ForeColor = Color.Black;
-            label11.Location = new Point(69, 458);
-            label11.Name = "label11";
-            label11.Size = new Size(48, 19);
-            label11.TabIndex = 93;
-            label11.Text = "Total:";
-            // 
             // BillingsDGV
             // 
             dataGridViewCellStyle4.BackColor = Color.White;
@@ -379,17 +361,18 @@
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             BillingsDGV.DefaultCellStyle = dataGridViewCellStyle6;
             BillingsDGV.GridColor = Color.FromArgb(231, 229, 255);
-            BillingsDGV.Location = new Point(337, 92);
+            BillingsDGV.Location = new Point(337, 109);
             BillingsDGV.Name = "BillingsDGV";
             BillingsDGV.RowHeadersVisible = false;
+            BillingsDGV.RowHeadersWidth = 51;
             BillingsDGV.RowTemplate.Height = 24;
-            BillingsDGV.Size = new Size(841, 547);
+            BillingsDGV.Size = new Size(841, 530);
             BillingsDGV.TabIndex = 95;
             BillingsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             BillingsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -413,15 +396,25 @@
             BillingsDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.Blue;
             BillingsDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
             // 
+            // AgentLbl
+            // 
+            AgentLbl.AutoSize = true;
+            AgentLbl.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AgentLbl.ForeColor = SystemColors.Highlight;
+            AgentLbl.Location = new Point(1045, 66);
+            AgentLbl.Name = "AgentLbl";
+            AgentLbl.Size = new Size(43, 19);
+            AgentLbl.TabIndex = 96;
+            AgentLbl.Text = "User";
+            // 
             // Billings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 663);
+            Controls.Add(AgentLbl);
             Controls.Add(BillingsDGV);
-            Controls.Add(TotalTb);
-            Controls.Add(label11);
             Controls.Add(TaxTb);
             Controls.Add(label10);
             Controls.Add(BPeriod);
@@ -447,6 +440,7 @@
             Name = "Billings";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billings";
+            Load += Billings_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -483,8 +477,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private TextBox TaxTb;
         private Label label10;
-        private TextBox TotalTb;
-        private Label label11;
         private Guna.UI2.WinForms.Guna2DataGridView BillingsDGV;
+        private Label AgentLbl;
     }
 }

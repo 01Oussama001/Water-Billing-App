@@ -46,9 +46,13 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
+            panel2 = new Panel();
+            bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // bunifuElipse1
@@ -109,7 +113,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(69, 153);
+            label1.Location = new Point(121, 10);
             label1.Name = "label1";
             label1.Size = new Size(102, 19);
             label1.TabIndex = 78;
@@ -195,16 +199,35 @@
             label2.TabIndex = 69;
             label2.Text = "Consumer";
             // 
+            // bunifuElipse5
+            // 
+            bunifuElipse5.ElipseRadius = 25;
+            bunifuElipse5.TargetControl = panel2;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Gold;
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(312, 158);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(347, 205);
+            panel2.TabIndex = 84;
+            // 
+            // bunifuElipse6
+            // 
+            bunifuElipse6.ElipseRadius = 5;
+            bunifuElipse6.TargetControl = this;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
+            Controls.Add(panel2);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label6);
-            Controls.Add(label1);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(label7);
@@ -220,6 +243,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,5 +266,8 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Panel panel2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
     }
 }
