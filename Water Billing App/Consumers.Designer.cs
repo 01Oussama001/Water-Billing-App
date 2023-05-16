@@ -58,8 +58,8 @@
             SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             EditBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            CRateTbl = new Label();
-            CRate = new TextBox();
+            CRat = new Label();
+            CRateTbl = new TextBox();
             ConsumersDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -231,6 +231,7 @@
             CCatCb.Name = "CCatCb";
             CCatCb.Size = new Size(194, 23);
             CCatCb.TabIndex = 40;
+            CCatCb.SelectionChangeCommitted += CCatCb_SelectionChangeCommitted;
             // 
             // label10
             // 
@@ -315,6 +316,7 @@
             EditBtn.Size = new Size(96, 44);
             EditBtn.TabIndex = 44;
             EditBtn.TextAlign = ContentAlignment.MiddleCenter;
+            EditBtn.Click += EditBtn_Click;
             // 
             // DeleteBtn
             // 
@@ -339,25 +341,26 @@
             DeleteBtn.Size = new Size(96, 44);
             DeleteBtn.TabIndex = 45;
             DeleteBtn.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteBtn.Click += DeleteBtn_Click;
+            // 
+            // CRat
+            // 
+            CRat.AutoSize = true;
+            CRat.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CRat.ForeColor = Color.Black;
+            CRat.Location = new Point(58, 469);
+            CRat.Name = "CRat";
+            CRat.Size = new Size(46, 19);
+            CRat.TabIndex = 70;
+            CRat.Text = "Rate:";
             // 
             // CRateTbl
             // 
-            CRateTbl.AutoSize = true;
-            CRateTbl.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CRateTbl.ForeColor = Color.Black;
-            CRateTbl.Location = new Point(58, 469);
+            CRateTbl.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CRateTbl.Location = new Point(58, 491);
             CRateTbl.Name = "CRateTbl";
-            CRateTbl.Size = new Size(46, 19);
-            CRateTbl.TabIndex = 70;
-            CRateTbl.Text = "Rate:";
-            // 
-            // CRate
-            // 
-            CRate.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CRate.Location = new Point(58, 491);
-            CRate.Name = "CRate";
-            CRate.Size = new Size(194, 27);
-            CRate.TabIndex = 69;
+            CRateTbl.Size = new Size(194, 27);
+            CRateTbl.TabIndex = 69;
             // 
             // ConsumersDGV
             // 
@@ -409,6 +412,7 @@
             ConsumersDGV.ThemeStyle.RowsStyle.Height = 24;
             ConsumersDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.Blue;
             ConsumersDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            ConsumersDGV.CellContentClick += ConsumersDGV_CellContentClick;
             // 
             // Consumers
             // 
@@ -417,8 +421,8 @@
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
             Controls.Add(ConsumersDGV);
+            Controls.Add(CRat);
             Controls.Add(CRateTbl);
-            Controls.Add(CRate);
             Controls.Add(DeleteBtn);
             Controls.Add(EditBtn);
             Controls.Add(SaveBtn);
@@ -442,6 +446,7 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Consumers";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             Load += Consumers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -478,8 +483,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 SaveBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 EditBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
-        private Label CRateTbl;
-        private TextBox CRate;
+        private Label CRat;
+        private TextBox CRateTbl;
         private Guna.UI2.WinForms.Guna2DataGridView ConsumersDGV;
     }
 }
