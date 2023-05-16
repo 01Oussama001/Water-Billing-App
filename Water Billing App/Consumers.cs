@@ -119,7 +119,7 @@ namespace Water_Billing_App
             if (CNameTbl.Text == "" || CPhoneTbl.Text == "" || CAddTbl.Text == "" || CCatCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Informations!!!");
-            }
+            }         
             else
             {
                 try
