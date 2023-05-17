@@ -72,7 +72,6 @@
             label1.Size = new Size(127, 33);
             label1.TabIndex = 0;
             label1.Text = "Company";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -83,6 +82,7 @@
             label2.Size = new Size(84, 19);
             label2.TabIndex = 1;
             label2.Text = "Consumer";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -93,6 +93,7 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 2;
             label3.Text = "Agents";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -114,6 +115,7 @@
             label5.Size = new Size(90, 19);
             label5.TabIndex = 4;
             label5.Text = "DashBoard";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -134,7 +136,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label7
             // 
@@ -165,7 +166,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox4
             // 
@@ -302,7 +302,6 @@
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

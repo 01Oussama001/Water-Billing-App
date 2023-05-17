@@ -7,29 +7,33 @@ namespace Water_Billing_App
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-
+            Consumers cons = new Consumers();
+            cons.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Agents agent = new Agents();
+            agent.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            Billings bill = new Billings();
+            bill.Show();
+            this.Hide();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
+            Dashboard dash = new Dashboard();
+            dash.Show();
+            this.Hide();
         }
     }
 }

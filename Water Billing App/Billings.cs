@@ -68,7 +68,7 @@ namespace Water_Billing_App
             CIdCb.SelectedIndex = -1;
             ConsTb.Text = "";
             RateTb.Text = "";
-            TaxTb.Text = ""; 
+            TaxTb.Text = "";
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -114,9 +114,32 @@ namespace Water_Billing_App
             getConsRate();
         }
 
-        private void Billings_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
+            Consumers cons = new Consumers();
+            cons.Show();
+            this.Hide();
+        }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Agents ag = new Agents();
+            ag.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Billings bill = new Billings();
+            bill.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Dashboard db = new Dashboard();
+            db.Show();
+            this.Hide();
         }
     }
 }

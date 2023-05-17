@@ -119,7 +119,7 @@ namespace Water_Billing_App
             if (CNameTbl.Text == "" || CPhoneTbl.Text == "" || CAddTbl.Text == "" || CCatCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Informations!!!");
-            }         
+            }
             else
             {
                 try
@@ -172,15 +172,32 @@ namespace Water_Billing_App
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-
+            Consumers cons = new Consumers();
+            cons.Show();
+            this.Hide();
         }
 
-        private void Consumers_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-
+            Agents age = new Agents();
+            age.Show();
+            this.Hide();
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Billings bil = new Billings();
+            bil.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

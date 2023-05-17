@@ -115,6 +115,7 @@
             label5.Size = new Size(90, 19);
             label5.TabIndex = 21;
             label5.Text = "DashBoard";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -125,6 +126,7 @@
             label4.Size = new Size(55, 19);
             label4.TabIndex = 20;
             label4.Text = "Billing";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -135,6 +137,7 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 19;
             label3.Text = "Agents";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -146,6 +149,7 @@
             label2.Size = new Size(92, 19);
             label2.TabIndex = 18;
             label2.Text = "Consumers";
+            label2.Click += label2_Click;
             // 
             // bunifuElipse1
             // 
@@ -170,7 +174,6 @@
             label1.Size = new Size(135, 19);
             label1.TabIndex = 33;
             label1.Text = "Consumer Name:";
-            label1.Click += label1_Click;
             // 
             // label6
             // 
@@ -448,7 +451,6 @@
             Name = "Consumers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
-            Load += Consumers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

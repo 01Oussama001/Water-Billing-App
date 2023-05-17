@@ -49,7 +49,7 @@ namespace Water_Billing_App
             SqlDataAdapter sda = new SqlDataAdapter("select sum(Total) from BillTbl", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            BillLbl.Text = dt.Rows[0][0].ToString() + " DHs"; 
+            BillLbl.Text = dt.Rows[0][0].ToString() + " DHs";
             con.Close();
         }
 
@@ -61,6 +61,45 @@ namespace Water_Billing_App
         private void BillMonthLbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BPeriod_ValueChanged(object sender, EventArgs e)
+        {
+            string BPer = BPeriod.Value.Month + " / " + BPeriod.Value.Year;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("select sum(Total) from BillTbl where BPeriod='" + BPer + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            BillMonthLbl.Text = dt.Rows[0][0].ToString() + " DHs";
+            con.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Billings obj = new Billings();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Agents obj = new Agents();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Consumers obj = new Consumers();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Dashboard obj = new Dashboard();
+            obj.Show();
+            this.Hide();
         }
     }
 }

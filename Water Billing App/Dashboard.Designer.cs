@@ -63,6 +63,8 @@
             panel1 = new Panel();
             label8 = new Label();
             label6 = new Label();
+            BPeriod = new DateTimePicker();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -164,6 +166,7 @@
             label5.Size = new Size(90, 19);
             label5.TabIndex = 72;
             label5.Text = "DashBoard";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -174,6 +177,7 @@
             label4.Size = new Size(55, 19);
             label4.TabIndex = 71;
             label4.Text = "Billing";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -184,6 +188,7 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 70;
             label3.Text = "Agents";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -194,6 +199,7 @@
             label2.Size = new Size(84, 19);
             label2.TabIndex = 69;
             label2.Text = "Consumer";
+            label2.Click += label2_Click;
             // 
             // bunifuElipse5
             // 
@@ -372,12 +378,35 @@
             label6.TabIndex = 89;
             label6.Text = "Distrubution";
             // 
+            // BPeriod
+            // 
+            BPeriod.AccessibleRole = AccessibleRole.None;
+            BPeriod.Location = new Point(813, 436);
+            BPeriod.Margin = new Padding(3, 2, 3, 2);
+            BPeriod.Name = "BPeriod";
+            BPeriod.Size = new Size(347, 23);
+            BPeriod.TabIndex = 94;
+            BPeriod.ValueChanged += BPeriod_ValueChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(945, 413);
+            label10.Name = "label10";
+            label10.Size = new Size(88, 19);
+            label10.TabIndex = 93;
+            label10.Text = "Bill Period:";
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
+            Controls.Add(BPeriod);
+            Controls.Add(label10);
             Controls.Add(panel1);
             Controls.Add(BillsPanel);
             Controls.Add(BillPanMonth);
@@ -447,5 +476,7 @@
         private Label label6;
         private Label label8;
         private Label ConsLbl;
+        private DateTimePicker BPeriod;
+        private Label label10;
     }
 }
