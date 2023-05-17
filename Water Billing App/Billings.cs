@@ -18,6 +18,7 @@ namespace Water_Billing_App
             InitializeComponent();
             showBills();
             getCons();
+            AgentLbl.Text = Login.User;
         }
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\oussa\OneDrive\Documents\WaterBillingDB.mdf;Integrated Security=True;Connect Timeout=30");

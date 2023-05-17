@@ -31,13 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
-            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             label1 = new Label();
-            textBox4 = new TextBox();
+            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
+            PasswordTb = new TextBox();
             label9 = new Label();
             label8 = new Label();
-            textBox3 = new TextBox();
-            bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            UsernameTb = new TextBox();
+            LoginBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             label2 = new Label();
             pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
@@ -54,11 +54,6 @@
             panel1.Size = new Size(865, 100);
             panel1.TabIndex = 0;
             // 
-            // bunifuElipse1
-            // 
-            bunifuElipse1.ElipseRadius = 30;
-            bunifuElipse1.TargetControl = this;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -70,13 +65,18 @@
             label1.TabIndex = 90;
             label1.Text = "Water Distribution Agency";
             // 
-            // textBox4
+            // bunifuElipse1
             // 
-            textBox4.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(317, 371);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(256, 27);
-            textBox4.TabIndex = 72;
+            bunifuElipse1.ElipseRadius = 30;
+            bunifuElipse1.TargetControl = this;
+            // 
+            // PasswordTb
+            // 
+            PasswordTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            PasswordTb.Location = new Point(317, 371);
+            PasswordTb.Name = "PasswordTb";
+            PasswordTb.Size = new Size(256, 27);
+            PasswordTb.TabIndex = 72;
             // 
             // label9
             // 
@@ -100,37 +100,38 @@
             label8.TabIndex = 70;
             label8.Text = "Username:";
             // 
-            // textBox3
+            // UsernameTb
             // 
-            textBox3.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(317, 307);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(256, 27);
-            textBox3.TabIndex = 69;
+            UsernameTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            UsernameTb.Location = new Point(317, 307);
+            UsernameTb.Name = "UsernameTb";
+            UsernameTb.Size = new Size(256, 27);
+            UsernameTb.TabIndex = 69;
             // 
-            // bunifuThinButton21
+            // LoginBtn
             // 
-            bunifuThinButton21.ActiveBorderThickness = 1;
-            bunifuThinButton21.ActiveCornerRadius = 20;
-            bunifuThinButton21.ActiveFillColor = Color.SeaGreen;
-            bunifuThinButton21.ActiveForecolor = Color.White;
-            bunifuThinButton21.ActiveLineColor = Color.SeaGreen;
-            bunifuThinButton21.BackColor = Color.White;
-            bunifuThinButton21.BackgroundImage = (Image)resources.GetObject("bunifuThinButton21.BackgroundImage");
-            bunifuThinButton21.ButtonText = "Login";
-            bunifuThinButton21.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            bunifuThinButton21.ForeColor = Color.SeaGreen;
-            bunifuThinButton21.IdleBorderThickness = 1;
-            bunifuThinButton21.IdleCornerRadius = 20;
-            bunifuThinButton21.IdleFillColor = Color.Blue;
-            bunifuThinButton21.IdleForecolor = Color.White;
-            bunifuThinButton21.IdleLineColor = Color.SeaGreen;
-            bunifuThinButton21.Location = new Point(406, 416);
-            bunifuThinButton21.Margin = new Padding(5);
-            bunifuThinButton21.Name = "bunifuThinButton21";
-            bunifuThinButton21.Size = new Size(96, 44);
-            bunifuThinButton21.TabIndex = 85;
-            bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
+            LoginBtn.ActiveBorderThickness = 1;
+            LoginBtn.ActiveCornerRadius = 20;
+            LoginBtn.ActiveFillColor = Color.SeaGreen;
+            LoginBtn.ActiveForecolor = Color.White;
+            LoginBtn.ActiveLineColor = Color.SeaGreen;
+            LoginBtn.BackColor = Color.White;
+            LoginBtn.BackgroundImage = (Image)resources.GetObject("LoginBtn.BackgroundImage");
+            LoginBtn.ButtonText = "Login";
+            LoginBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LoginBtn.ForeColor = Color.SeaGreen;
+            LoginBtn.IdleBorderThickness = 1;
+            LoginBtn.IdleCornerRadius = 20;
+            LoginBtn.IdleFillColor = Color.Blue;
+            LoginBtn.IdleForecolor = Color.White;
+            LoginBtn.IdleLineColor = Color.SeaGreen;
+            LoginBtn.Location = new Point(406, 416);
+            LoginBtn.Margin = new Padding(5);
+            LoginBtn.Name = "LoginBtn";
+            LoginBtn.Size = new Size(96, 44);
+            LoginBtn.TabIndex = 85;
+            LoginBtn.TextAlign = ContentAlignment.MiddleCenter;
+            LoginBtn.Click += LoginBtn_Click;
             // 
             // label2
             // 
@@ -161,11 +162,11 @@
             ClientSize = new Size(865, 612);
             Controls.Add(pictureBox3);
             Controls.Add(label2);
-            Controls.Add(bunifuThinButton21);
-            Controls.Add(textBox4);
+            Controls.Add(LoginBtn);
+            Controls.Add(PasswordTb);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox3);
+            Controls.Add(UsernameTb);
             Controls.Add(panel1);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
@@ -184,11 +185,11 @@
         private Panel panel1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Label label1;
-        private TextBox textBox4;
+        private TextBox PasswordTb;
         private Label label9;
         private Label label8;
-        private TextBox textBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private TextBox UsernameTb;
+        private Bunifu.Framework.UI.BunifuThinButton2 LoginBtn;
         private Label label2;
         private PictureBox pictureBox3;
     }
