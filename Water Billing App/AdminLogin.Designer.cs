@@ -1,6 +1,6 @@
 ﻿namespace Water_Billing_App
 {
-    partial class Login
+    partial class AdminLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             panel1 = new Panel();
             pictureBox5 = new PictureBox();
             label1 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
+            pictureBox3 = new PictureBox();
+            label2 = new Label();
+            LoginBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             PasswordTb = new TextBox();
             label9 = new Label();
-            label8 = new Label();
-            UsernameTb = new TextBox();
-            LoginBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            label2 = new Label();
-            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -54,8 +52,8 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(865, 100);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(867, 100);
+            panel1.TabIndex = 88;
             // 
             // pictureBox5
             // 
@@ -67,7 +65,6 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 88;
             pictureBox5.TabStop = false;
-            pictureBox5.Click += pictureBox5_Click;
             // 
             // label1
             // 
@@ -85,44 +82,27 @@
             bunifuElipse1.ElipseRadius = 30;
             bunifuElipse1.TargetControl = this;
             // 
-            // PasswordTb
+            // pictureBox3
             // 
-            PasswordTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            PasswordTb.Location = new Point(317, 371);
-            PasswordTb.Name = "PasswordTb";
-            PasswordTb.PasswordChar = '*';
-            PasswordTb.Size = new Size(256, 27);
-            PasswordTb.TabIndex = 72;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(370, 162);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(165, 119);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 95;
+            pictureBox3.TabStop = false;
             // 
-            // label9
+            // label2
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(317, 349);
-            label9.Name = "label9";
-            label9.Size = new Size(85, 19);
-            label9.TabIndex = 71;
-            label9.Text = "Password:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(317, 285);
-            label8.Name = "label8";
-            label8.Size = new Size(88, 19);
-            label8.TabIndex = 70;
-            label8.Text = "Username:";
-            // 
-            // UsernameTb
-            // 
-            UsernameTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            UsernameTb.Location = new Point(317, 307);
-            UsernameTb.Name = "UsernameTb";
-            UsernameTb.Size = new Size(256, 27);
-            UsernameTb.TabIndex = 69;
+            label2.AutoSize = true;
+            label2.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Blue;
+            label2.Location = new Point(428, 441);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 19);
+            label2.TabIndex = 94;
+            label2.Text = "Back";
+            label2.Click += label2_Click;
             // 
             // LoginBtn
             // 
@@ -141,55 +121,53 @@
             LoginBtn.IdleFillColor = Color.Blue;
             LoginBtn.IdleForecolor = Color.White;
             LoginBtn.IdleLineColor = Color.SeaGreen;
-            LoginBtn.Location = new Point(406, 416);
+            LoginBtn.Location = new Point(406, 392);
             LoginBtn.Margin = new Padding(5);
             LoginBtn.Name = "LoginBtn";
             LoginBtn.Size = new Size(96, 44);
-            LoginBtn.TabIndex = 85;
+            LoginBtn.TabIndex = 93;
             LoginBtn.TextAlign = ContentAlignment.MiddleCenter;
             LoginBtn.Click += LoginBtn_Click;
             // 
-            // label2
+            // PasswordTb
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Blue;
-            label2.Location = new Point(428, 465);
-            label2.Name = "label2";
-            label2.Size = new Size(55, 19);
-            label2.TabIndex = 86;
-            label2.Text = "Admin";
-            label2.Click += label2_Click;
+            PasswordTb.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            PasswordTb.Location = new Point(317, 347);
+            PasswordTb.Name = "PasswordTb";
+            PasswordTb.PasswordChar = '*';
+            PasswordTb.Size = new Size(256, 27);
+            PasswordTb.TabIndex = 92;
+            PasswordTb.TextChanged += PasswordTb_TextChanged;
             // 
-            // pictureBox3
+            // label9
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(370, 118);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(165, 119);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 87;
-            pictureBox3.TabStop = false;
+            label9.AutoSize = true;
+            label9.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(317, 325);
+            label9.Name = "label9";
+            label9.Size = new Size(85, 19);
+            label9.TabIndex = 91;
+            label9.Text = "Password:";
             // 
-            // Login
+            // AdminLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(5F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(865, 612);
+            ClientSize = new Size(867, 573);
+            Controls.Add(panel1);
             Controls.Add(pictureBox3);
             Controls.Add(label2);
             Controls.Add(LoginBtn);
             Controls.Add(PasswordTb);
             Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(UsernameTb);
-            Controls.Add(panel1);
-            ForeColor = Color.White;
+            Font = new Font("Bahnschrift Condensed", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Login";
+            Margin = new Padding(2, 3, 2, 3);
+            Name = "AdminLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "AdminLogin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -201,15 +179,13 @@
         #endregion
 
         private Panel panel1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private PictureBox pictureBox5;
         private Label label1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private PictureBox pictureBox3;
+        private Label label2;
+        private Bunifu.Framework.UI.BunifuThinButton2 LoginBtn;
         private TextBox PasswordTb;
         private Label label9;
-        private Label label8;
-        private TextBox UsernameTb;
-        private Bunifu.Framework.UI.BunifuThinButton2 LoginBtn;
-        private Label label2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
     }
 }

@@ -143,30 +143,22 @@ namespace Water_Billing_App
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Consumers cons = new Consumers();
-            cons.Show();
-            this.Hide();
+
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Billings bill = new Billings();
-            bill.Show();
-            this.Hide();
+
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Dashboard dash = new Dashboard();
-            dash.Show();
-            this.Hide();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Agents ag = new Agents();
-            ag.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

@@ -83,9 +83,7 @@ namespace Water_Billing_App
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Agents obj = new Agents();
-            obj.Show();
-            this.Hide();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
