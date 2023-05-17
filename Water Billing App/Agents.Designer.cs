@@ -277,7 +277,6 @@
             label5.Size = new Size(90, 19);
             label5.TabIndex = 49;
             label5.Text = "DashBoard";
-            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -288,7 +287,6 @@
             label4.Size = new Size(55, 19);
             label4.TabIndex = 48;
             label4.Text = "Billing";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -300,7 +298,6 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 47;
             label3.Text = "Agents";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -311,7 +308,6 @@
             label2.Size = new Size(84, 19);
             label2.TabIndex = 46;
             label2.Text = "Consumer";
-            label2.Click += label2_Click;
             // 
             // AgentsDGV
             // 

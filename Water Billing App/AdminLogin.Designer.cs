@@ -137,7 +137,6 @@
             PasswordTb.PasswordChar = '*';
             PasswordTb.Size = new Size(256, 27);
             PasswordTb.TabIndex = 92;
-            PasswordTb.TextChanged += PasswordTb_TextChanged;
             // 
             // label9
             // 

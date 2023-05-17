@@ -189,7 +189,6 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 70;
             label3.Text = "Agents";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -242,7 +241,6 @@
             ConsLbl.Size = new Size(99, 25);
             ConsLbl.TabIndex = 89;
             ConsLbl.Text = "Numbers";
-            ConsLbl.Click += ConsLbl_Click;
             // 
             // Consumers
             // 
@@ -275,7 +273,6 @@
             BillMonthLbl.Size = new Size(99, 25);
             BillMonthLbl.TabIndex = 88;
             BillMonthLbl.Text = "Numbers";
-            BillMonthLbl.Click += BillMonthLbl_Click;
             // 
             // label11
             // 

@@ -24,11 +24,6 @@ namespace Water_Billing_App
             this.Hide();
         }
 
-        private void PasswordTb_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             if (PasswordTb.Text == "")

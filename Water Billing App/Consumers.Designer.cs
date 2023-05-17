@@ -138,7 +138,6 @@
             label3.Size = new Size(59, 19);
             label3.TabIndex = 19;
             label3.Text = "Agents";
-            label3.Click += label3_Click;
             // 
             // label2
             // 

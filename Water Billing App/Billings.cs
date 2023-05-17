@@ -122,11 +122,6 @@ namespace Water_Billing_App
             this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
             Billings bill = new Billings();

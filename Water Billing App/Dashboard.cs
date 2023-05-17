@@ -53,16 +53,6 @@ namespace Water_Billing_App
             con.Close();
         }
 
-        private void ConsLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BillMonthLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BPeriod_ValueChanged(object sender, EventArgs e)
         {
             string BPer = BPeriod.Value.Month + " / " + BPeriod.Value.Year;
@@ -79,11 +69,6 @@ namespace Water_Billing_App
             Billings obj = new Billings();
             obj.Show();
             this.Hide();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
