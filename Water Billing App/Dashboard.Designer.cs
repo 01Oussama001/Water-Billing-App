@@ -33,11 +33,9 @@
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             label9 = new Label();
-            label8 = new Label();
-            label6 = new Label();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
-            label1 = new Label();
+            Agents = new Label();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             label7 = new Label();
@@ -47,12 +45,31 @@
             label3 = new Label();
             label2 = new Label();
             bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
-            panel2 = new Panel();
+            AgentsPanel = new Panel();
             bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(components);
+            ConsumersPanel = new Panel();
+            Consumers = new Label();
+            BillPanMonth = new Panel();
+            label11 = new Label();
+            BillsPanel = new Panel();
+            Bills = new Label();
+            label1 = new Label();
+            label10 = new Label();
+            label12 = new Label();
+            bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(components);
+            panel1 = new Panel();
+            label6 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
+            AgentsPanel.SuspendLayout();
+            ConsumersPanel.SuspendLayout();
+            BillPanMonth.SuspendLayout();
+            BillsPanel.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // bunifuElipse1
@@ -68,35 +85,13 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(69, 391);
+            label9.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.DodgerBlue;
+            label9.Location = new Point(124, 50);
             label9.Name = "label9";
-            label9.Size = new Size(131, 19);
+            label9.Size = new Size(99, 25);
             label9.TabIndex = 83;
-            label9.Text = "Agent Password:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(69, 327);
-            label8.Name = "label8";
-            label8.Size = new Size(105, 19);
-            label8.TabIndex = 82;
-            label8.Text = "Agent Phone:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(69, 215);
-            label6.Name = "label6";
-            label6.Size = new Size(119, 19);
-            label6.TabIndex = 80;
-            label6.Text = "Agent Address:";
+            label9.Text = "Numbers";
             // 
             // bunifuElipse3
             // 
@@ -108,16 +103,16 @@
             bunifuElipse4.ElipseRadius = 25;
             bunifuElipse4.TargetControl = this;
             // 
-            // label1
+            // Agents
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(121, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 19);
-            label1.TabIndex = 78;
-            label1.Text = "Agent Name:";
+            Agents.AutoSize = true;
+            Agents.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Agents.ForeColor = Color.Black;
+            Agents.Location = new Point(147, 9);
+            Agents.Name = "Agents";
+            Agents.Size = new Size(59, 19);
+            Agents.TabIndex = 78;
+            Agents.Text = "Agents";
             // 
             // pictureBox5
             // 
@@ -202,21 +197,165 @@
             // bunifuElipse5
             // 
             bunifuElipse5.ElipseRadius = 25;
-            bunifuElipse5.TargetControl = panel2;
+            bunifuElipse5.TargetControl = AgentsPanel;
             // 
-            // panel2
+            // AgentsPanel
             // 
-            panel2.BackColor = Color.Gold;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(312, 158);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(347, 205);
-            panel2.TabIndex = 84;
+            AgentsPanel.BackColor = Color.Gold;
+            AgentsPanel.Controls.Add(Agents);
+            AgentsPanel.Controls.Add(label9);
+            AgentsPanel.Location = new Point(334, 119);
+            AgentsPanel.Name = "AgentsPanel";
+            AgentsPanel.Size = new Size(347, 171);
+            AgentsPanel.TabIndex = 84;
             // 
             // bunifuElipse6
             // 
             bunifuElipse6.ElipseRadius = 5;
             bunifuElipse6.TargetControl = this;
+            // 
+            // ConsumersPanel
+            // 
+            ConsumersPanel.BackColor = Color.Orange;
+            ConsumersPanel.Controls.Add(Consumers);
+            ConsumersPanel.Location = new Point(813, 119);
+            ConsumersPanel.Name = "ConsumersPanel";
+            ConsumersPanel.Size = new Size(347, 171);
+            ConsumersPanel.TabIndex = 85;
+            // 
+            // Consumers
+            // 
+            Consumers.AutoSize = true;
+            Consumers.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Consumers.ForeColor = Color.Black;
+            Consumers.Location = new Point(147, 9);
+            Consumers.Name = "Consumers";
+            Consumers.Size = new Size(92, 19);
+            Consumers.TabIndex = 78;
+            Consumers.Text = "Consumers";
+            // 
+            // BillPanMonth
+            // 
+            BillPanMonth.BackColor = Color.DarkKhaki;
+            BillPanMonth.Controls.Add(label12);
+            BillPanMonth.Controls.Add(label11);
+            BillPanMonth.Location = new Point(813, 464);
+            BillPanMonth.Name = "BillPanMonth";
+            BillPanMonth.Size = new Size(347, 171);
+            BillPanMonth.TabIndex = 86;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(128, 9);
+            label11.Name = "label11";
+            label11.Size = new Size(111, 19);
+            label11.TabIndex = 78;
+            label11.Text = "Bills By Month";
+            // 
+            // BillsPanel
+            // 
+            BillsPanel.BackColor = Color.PaleTurquoise;
+            BillsPanel.Controls.Add(label10);
+            BillsPanel.Controls.Add(Bills);
+            BillsPanel.Location = new Point(334, 464);
+            BillsPanel.Name = "BillsPanel";
+            BillsPanel.Size = new Size(347, 171);
+            BillsPanel.TabIndex = 87;
+            // 
+            // Bills
+            // 
+            Bills.AutoSize = true;
+            Bills.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Bills.ForeColor = Color.Black;
+            Bills.Location = new Point(147, 9);
+            Bills.Name = "Bills";
+            Bills.Size = new Size(41, 19);
+            Bills.TabIndex = 78;
+            Bills.Text = "Bills";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(81, 197);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 33);
+            label1.TabIndex = 88;
+            label1.Text = "Water";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.DodgerBlue;
+            label10.Location = new Point(124, 54);
+            label10.Name = "label10";
+            label10.Size = new Size(99, 25);
+            label10.TabIndex = 88;
+            label10.Text = "Numbers";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ForeColor = Color.DodgerBlue;
+            label12.Location = new Point(147, 54);
+            label12.Name = "label12";
+            label12.Size = new Size(99, 25);
+            label12.TabIndex = 88;
+            label12.Text = "Numbers";
+            // 
+            // bunifuElipse7
+            // 
+            bunifuElipse7.ElipseRadius = 25;
+            bunifuElipse7.TargetControl = ConsumersPanel;
+            // 
+            // bunifuElipse8
+            // 
+            bunifuElipse8.ElipseRadius = 25;
+            bunifuElipse8.TargetControl = BillsPanel;
+            // 
+            // bunifuElipse9
+            // 
+            bunifuElipse9.ElipseRadius = 25;
+            bunifuElipse9.TargetControl = BillPanMonth;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.SteelBlue;
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(30, 100);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(256, 594);
+            panel1.TabIndex = 88;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Bahnschrift", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(45, 255);
+            label6.Name = "label6";
+            label6.Size = new Size(166, 33);
+            label6.TabIndex = 89;
+            label6.Text = "Distrubution";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Bahnschrift", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(71, 313);
+            label8.Name = "label8";
+            label8.Size = new Size(105, 33);
+            label8.TabIndex = 90;
+            label8.Text = "System";
             // 
             // Dashboard
             // 
@@ -224,10 +363,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1194, 711);
-            Controls.Add(panel2);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label6);
+            Controls.Add(panel1);
+            Controls.Add(BillsPanel);
+            Controls.Add(BillPanMonth);
+            Controls.Add(ConsumersPanel);
+            Controls.Add(AgentsPanel);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(label7);
@@ -236,6 +376,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
@@ -243,8 +384,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            AgentsPanel.ResumeLayout(false);
+            AgentsPanel.PerformLayout();
+            ConsumersPanel.ResumeLayout(false);
+            ConsumersPanel.PerformLayout();
+            BillPanMonth.ResumeLayout(false);
+            BillPanMonth.PerformLayout();
+            BillsPanel.ResumeLayout(false);
+            BillsPanel.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,9 +401,7 @@
         #endregion
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Label label9;
-        private Label label8;
-        private Label label6;
-        private Label label1;
+        private Label Agents;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private Label label7;
@@ -267,7 +414,22 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
-        private Panel panel2;
+        private Panel AgentsPanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private Panel BillPanMonth;
+        private Label label11;
+        private Panel ConsumersPanel;
+        private Label Consumers;
+        private Panel BillsPanel;
+        private Label Bills;
+        private Label label10;
+        private Label label12;
+        private Label label1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
+        private Panel panel1;
+        private Label label6;
+        private Label label8;
     }
 }
