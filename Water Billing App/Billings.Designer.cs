@@ -229,6 +229,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 76;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
@@ -405,7 +406,7 @@
             AgentLbl.AutoSize = true;
             AgentLbl.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             AgentLbl.ForeColor = SystemColors.Highlight;
-            AgentLbl.Location = new Point(1045, 66);
+            AgentLbl.Location = new Point(294, 30);
             AgentLbl.Name = "AgentLbl";
             AgentLbl.Size = new Size(43, 19);
             AgentLbl.TabIndex = 96;
@@ -416,7 +417,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1194, 663);
+            ClientSize = new Size(1208, 704);
             Controls.Add(AgentLbl);
             Controls.Add(BillingsDGV);
             Controls.Add(TaxTb);
