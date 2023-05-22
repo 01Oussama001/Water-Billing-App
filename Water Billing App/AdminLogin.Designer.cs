@@ -73,7 +73,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(317, 20);
             label1.Name = "label1";
-            label1.Size = new Size(198, 19);
+            label1.Size = new Size(246, 24);
             label1.TabIndex = 90;
             label1.Text = "Water Distribution Agency";
             // 
@@ -99,7 +99,7 @@
             label2.ForeColor = Color.Blue;
             label2.Location = new Point(428, 441);
             label2.Name = "label2";
-            label2.Size = new Size(44, 19);
+            label2.Size = new Size(55, 24);
             label2.TabIndex = 94;
             label2.Text = "Back";
             label2.Click += label2_Click;
@@ -135,7 +135,7 @@
             PasswordTb.Location = new Point(317, 347);
             PasswordTb.Name = "PasswordTb";
             PasswordTb.PasswordChar = '*';
-            PasswordTb.Size = new Size(256, 27);
+            PasswordTb.Size = new Size(256, 32);
             PasswordTb.TabIndex = 92;
             // 
             // label9
@@ -143,15 +143,15 @@
             label9.AutoSize = true;
             label9.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(317, 325);
+            label9.Location = new Point(317, 311);
             label9.Name = "label9";
-            label9.Size = new Size(85, 19);
+            label9.Size = new Size(104, 24);
             label9.TabIndex = 91;
             label9.Text = "Password:";
             // 
             // AdminLogin
             // 
-            AutoScaleDimensions = new SizeF(5F, 14F);
+            AutoScaleDimensions = new SizeF(6F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(867, 573);
