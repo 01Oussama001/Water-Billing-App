@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billings));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billings));
             RateTb = new TextBox();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -61,6 +61,7 @@
             label10 = new Label();
             BillingsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             AgentLbl = new Label();
+            PrintBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -103,7 +104,7 @@
             DeleteBtn.IdleFillColor = Color.Blue;
             DeleteBtn.IdleForecolor = Color.White;
             DeleteBtn.IdleLineColor = Color.SeaGreen;
-            DeleteBtn.Location = new Point(108, 528);
+            DeleteBtn.Location = new Point(61, 528);
             DeleteBtn.Margin = new Padding(5);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(96, 44);
@@ -411,12 +412,37 @@
             AgentLbl.TabIndex = 96;
             AgentLbl.Text = "User";
             // 
+            // PrintBtn
+            // 
+            PrintBtn.ActiveBorderThickness = 1;
+            PrintBtn.ActiveCornerRadius = 20;
+            PrintBtn.ActiveFillColor = Color.SeaGreen;
+            PrintBtn.ActiveForecolor = Color.White;
+            PrintBtn.ActiveLineColor = Color.SeaGreen;
+            PrintBtn.BackColor = Color.White;
+            PrintBtn.BackgroundImage = (Image)resources.GetObject("PrintBtn.BackgroundImage");
+            PrintBtn.ButtonText = "Print";
+            PrintBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            PrintBtn.ForeColor = Color.SeaGreen;
+            PrintBtn.IdleBorderThickness = 1;
+            PrintBtn.IdleCornerRadius = 20;
+            PrintBtn.IdleFillColor = Color.Blue;
+            PrintBtn.IdleForecolor = Color.White;
+            PrintBtn.IdleLineColor = Color.SeaGreen;
+            PrintBtn.Location = new Point(167, 528);
+            PrintBtn.Margin = new Padding(5);
+            PrintBtn.Name = "PrintBtn";
+            PrintBtn.Size = new Size(96, 44);
+            PrintBtn.TabIndex = 97;
+            PrintBtn.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Billings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1208, 704);
+            Controls.Add(PrintBtn);
             Controls.Add(AgentLbl);
             Controls.Add(BillingsDGV);
             Controls.Add(TaxTb);
@@ -482,5 +508,6 @@
         private Label label10;
         private Guna.UI2.WinForms.Guna2DataGridView BillingsDGV;
         private Label AgentLbl;
+        private Bunifu.Framework.UI.BunifuThinButton2 PrintBtn;
     }
 }
