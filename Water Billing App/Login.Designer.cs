@@ -61,7 +61,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.White;
-            pictureBox5.Image = Properties.Resources.back;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(931, 16);
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
