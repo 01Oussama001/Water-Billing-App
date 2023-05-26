@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms" Version="6.1.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.4" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
   </ItemGroup>
 
   <ItemGroup>

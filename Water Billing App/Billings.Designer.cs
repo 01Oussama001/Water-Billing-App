@@ -105,11 +105,12 @@
             DeleteBtn.IdleForecolor = Color.White;
             DeleteBtn.IdleLineColor = Color.SeaGreen;
             DeleteBtn.Location = new Point(61, 528);
-            DeleteBtn.Margin = new Padding(5);
+            DeleteBtn.Margin = new Padding(5, 5, 5, 5);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(96, 44);
             DeleteBtn.TabIndex = 86;
             DeleteBtn.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // EditBtn
             // 
@@ -129,11 +130,12 @@
             EditBtn.IdleForecolor = Color.White;
             EditBtn.IdleLineColor = Color.SeaGreen;
             EditBtn.Location = new Point(167, 474);
-            EditBtn.Margin = new Padding(5);
+            EditBtn.Margin = new Padding(5, 5, 5, 5);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(96, 44);
             EditBtn.TabIndex = 85;
             EditBtn.TextAlign = ContentAlignment.MiddleCenter;
+            EditBtn.Click += EditBtn_Click;
             // 
             // label9
             // 
@@ -199,7 +201,7 @@
             SaveBtn.IdleForecolor = Color.White;
             SaveBtn.IdleLineColor = Color.SeaGreen;
             SaveBtn.Location = new Point(61, 474);
-            SaveBtn.Margin = new Padding(5);
+            SaveBtn.Margin = new Padding(5, 5, 5, 5);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.Size = new Size(96, 44);
             SaveBtn.TabIndex = 84;
@@ -400,6 +402,7 @@
             BillingsDGV.ThemeStyle.RowsStyle.Height = 24;
             BillingsDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.Blue;
             BillingsDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            BillingsDGV.CellContentClick += BillingsDGV_CellContentClick;
             // 
             // AgentLbl
             // 
@@ -430,18 +433,19 @@
             PrintBtn.IdleForecolor = Color.White;
             PrintBtn.IdleLineColor = Color.SeaGreen;
             PrintBtn.Location = new Point(167, 528);
-            PrintBtn.Margin = new Padding(5);
+            PrintBtn.Margin = new Padding(5, 5, 5, 5);
             PrintBtn.Name = "PrintBtn";
             PrintBtn.Size = new Size(96, 44);
             PrintBtn.TabIndex = 97;
             PrintBtn.TextAlign = ContentAlignment.MiddleCenter;
+            PrintBtn.Click += PrintBtn_Click;
             // 
             // Billings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1208, 704);
+            ClientSize = new Size(1208, 663);
             Controls.Add(PrintBtn);
             Controls.Add(AgentLbl);
             Controls.Add(BillingsDGV);
