@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Drawing.Printing;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using QRCoder;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Water_Billing_App
 {
@@ -247,74 +247,73 @@ namespace Water_Billing_App
         }
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-{
-    Graphics graphics = e.Graphics;
-    Font font = new Font("Arial", 12);
-    Brush brush = Brushes.Black;
-    int startX = 10;
-    int startY = 10;
-    int lineHeight = (int)font.GetHeight();
+        {
+            Graphics graphics = e.Graphics;
+            Font font = new Font("Arial", 12);
+            Brush brush = Brushes.Black;
+            int startX = 10;
+            int startY = 10;
+            int lineHeight = (int)font.GetHeight();
 
-    // Retrieve the selected bill details
-    string billNumber = BillingsDGV.SelectedRows[0].Cells["BNum"].Value.ToString();
-    string customerId = CIdCb.SelectedValue.ToString();
-    string agent = AgentLbl.Text;
-    string period = BPeriod.Value.Month + " / " + BPeriod.Value.Year;
-    string consumption = ConsTb.Text;
-    string rate = RateTb.Text;
-    string tax = TaxTb.Text;
-    double total = Convert.ToDouble(rate) * Convert.ToDouble(consumption);
+            // Retrieve the selected bill details
+            string billNumber = BillingsDGV.SelectedRows[0].Cells["BNum"].Value.ToString();
+            string customerId = CIdCb.SelectedValue.ToString();
+            string agent = AgentLbl.Text;
+            string period = BPeriod.Value.Month + " / " + BPeriod.Value.Year;
+            string consumption = ConsTb.Text;
+            string rate = RateTb.Text;
+            string tax = TaxTb.Text;
+            double total = Convert.ToDouble(rate) * Convert.ToDouble(consumption);
 
-    // Load images
-    Image logoImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Water Billing App\\Water Billing App\\images\\logo.jpg");
-    Image watermarkImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Water Billing App\\Water Billing App\\images\\watermark.jpg");
+            // Load images
+            Image logoImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Water Billing App\\Water Billing App\\images\\logo.jpg");
+            Image watermarkImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Water Billing App\\Water Billing App\\images\\watermark.jpg");
 
-    // Set the position and size of the images
-    Rectangle logoRect = new Rectangle(startX, startY, 100, 100);
-    Rectangle watermarkRect = new Rectangle(e.PageBounds.Width - 150, e.PageBounds.Height - 150, 100, 100);
+            // Set the position and size of the images
+            Rectangle logoRect = new Rectangle(startX, startY, 100, 100);
+            Rectangle watermarkRect = new Rectangle(e.PageBounds.Width - 150, e.PageBounds.Height - 150, 100, 100);
 
-    // Draw the logo image
-    graphics.DrawImage(logoImage, logoRect);
+            // Draw the logo image
+            graphics.DrawImage(logoImage, logoRect);
 
-    // Draw the watermark image
-    graphics.DrawImage(watermarkImage, watermarkRect);
+            // Draw the watermark image
+            graphics.DrawImage(watermarkImage, watermarkRect);
 
-    // Generate the bill content
-    StringBuilder billContent = new StringBuilder();
-    billContent.AppendLine("Bill Number: " + billNumber);
-    billContent.AppendLine("Customer ID: " + customerId);
-    billContent.AppendLine("Agent: " + agent);
-    billContent.AppendLine("Period: " + period);
-    billContent.AppendLine("Consumption: " + consumption + "m3");
-    billContent.AppendLine("Rate: " + rate);
-    billContent.AppendLine("Tax: " + tax + "%");
-    billContent.AppendLine("Total: " + total + "DHs");
+            // Generate the bill content
+            StringBuilder billContent = new StringBuilder();
+            billContent.AppendLine("Bill Number: " + billNumber);
+            billContent.AppendLine("Customer ID: " + customerId);
+            billContent.AppendLine("Agent: " + agent);
+            billContent.AppendLine("Period: " + period);
+            billContent.AppendLine("Consumption: " + consumption + "m3");
+            billContent.AppendLine("Rate: " + rate);
+            billContent.AppendLine("Tax: " + tax + "%");
+            billContent.AppendLine("Total: " + total + "DHs");
 
-    // Draw the bill content
-    graphics.DrawString(billContent.ToString(), font, brush, startX + 10, startY + 150);
+            // Draw the bill content
+            graphics.DrawString(billContent.ToString(), font, brush, startX + 10, startY + 150);
 
-    // Draw a line separator
-    int lineSeparatorY = startY + 120 + lineHeight * 9;
-    graphics.DrawLine(new Pen(brush), startX, lineSeparatorY, e.PageBounds.Width - startX, lineSeparatorY);
+            // Draw a line separator
+            int lineSeparatorY = startY + 120 + lineHeight * 9;
+            graphics.DrawLine(new Pen(brush), startX, lineSeparatorY, e.PageBounds.Width - startX, lineSeparatorY);
 
-    // Draw additional text or images as needed
+            // Draw additional text or images as needed
 
-    // Example: Draw a message
-    string message = "Thank you for your payment!";
-    SizeF messageSize = graphics.MeasureString(message, font);
-    int messageX = startX;
-    int messageY = lineSeparatorY + lineHeight;
-    graphics.DrawString(message, font, brush, messageX, messageY);
+            // Example: Draw a message
+            string message = "Thank you for your payment!";
+            SizeF messageSize = graphics.MeasureString(message, font);
+            int messageX = startX;
+            int messageY = lineSeparatorY + lineHeight;
+            graphics.DrawString(message, font, brush, messageX, messageY);
 
-    // Example: Draw a QR code
-    string qrCodeContent = "https://example.com";
-    QRCodeGenerator qrGenerator = new QRCodeGenerator();
-    QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrCodeContent, QRCodeGenerator.ECCLevel.Q);
-    QRCode qrCode = new QRCode(qrCodeData);
-    Bitmap qrCodeImage = qrCode.GetGraphic(5);
-    Rectangle qrCodeRect = new Rectangle(startX, messageY + (int)messageSize.Height, 200, 200);
-    graphics.DrawImage(qrCodeImage, qrCodeRect);
-}
-
+            // Example: Draw a QR code
+            string qrCodeContent = "https://example.com";
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrCodeContent, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(5);
+            Rectangle qrCodeRect = new Rectangle(startX, messageY + (int)messageSize.Height, 200, 200);
+            graphics.DrawImage(qrCodeImage, qrCodeRect);
+        }
     }
 }

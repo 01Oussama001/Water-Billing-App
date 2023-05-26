@@ -105,7 +105,7 @@
             DeleteBtn.IdleForecolor = Color.White;
             DeleteBtn.IdleLineColor = Color.SeaGreen;
             DeleteBtn.Location = new Point(61, 528);
-            DeleteBtn.Margin = new Padding(5, 5, 5, 5);
+            DeleteBtn.Margin = new Padding(5);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(96, 44);
             DeleteBtn.TabIndex = 86;
@@ -130,7 +130,7 @@
             EditBtn.IdleForecolor = Color.White;
             EditBtn.IdleLineColor = Color.SeaGreen;
             EditBtn.Location = new Point(167, 474);
-            EditBtn.Margin = new Padding(5, 5, 5, 5);
+            EditBtn.Margin = new Padding(5);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(96, 44);
             EditBtn.TabIndex = 85;
@@ -201,7 +201,7 @@
             SaveBtn.IdleForecolor = Color.White;
             SaveBtn.IdleLineColor = Color.SeaGreen;
             SaveBtn.Location = new Point(61, 474);
-            SaveBtn.Margin = new Padding(5, 5, 5, 5);
+            SaveBtn.Margin = new Padding(5);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.Size = new Size(96, 44);
             SaveBtn.TabIndex = 84;
@@ -226,9 +226,9 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(1128, 661);
+            pictureBox5.Location = new Point(1145, 612);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(32, 26);
+            pictureBox5.Size = new Size(36, 29);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 76;
             pictureBox5.TabStop = false;
@@ -237,9 +237,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1111, 652);
+            pictureBox4.Location = new Point(1129, 601);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(67, 42);
+            pictureBox4.Size = new Size(67, 50);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 75;
             pictureBox4.TabStop = false;
@@ -379,7 +379,7 @@
             BillingsDGV.RowHeadersVisible = false;
             BillingsDGV.RowHeadersWidth = 51;
             BillingsDGV.RowTemplate.Height = 24;
-            BillingsDGV.Size = new Size(841, 530);
+            BillingsDGV.Size = new Size(841, 476);
             BillingsDGV.TabIndex = 95;
             BillingsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             BillingsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -433,7 +433,7 @@
             PrintBtn.IdleForecolor = Color.White;
             PrintBtn.IdleLineColor = Color.SeaGreen;
             PrintBtn.Location = new Point(167, 528);
-            PrintBtn.Margin = new Padding(5, 5, 5, 5);
+            PrintBtn.Margin = new Padding(5);
             PrintBtn.Name = "PrintBtn";
             PrintBtn.Size = new Size(96, 44);
             PrintBtn.TabIndex = 97;
